@@ -1,0 +1,99 @@
+.why-attend-container {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: white;
+  }
+  
+  .why-attend-text {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .why-attend-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(243, 184, 45);
+  }
+  
+  .why-attend-text p {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    line-height: 1.8;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .why-attend-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .why-attend-card {
+    flex: 1;
+    height: 200px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden; /* Ensure the pseudo-element doesn’t overflow */
+    background: url('../../assets/Techvid7.jpeg'); /* Apply the background image */
+    background-size: cover; /* Ensure the image covers the entire card */
+    background-blend-mode: overlay; /* Use blend mode to fade the background */
+  }
+  
+  .why-attend-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(193, 189, 189, 0.4); /* Light white overlay for faded effect */
+    z-index: 1; /* Ensure overlay is above the background image */
+  }
+  
+  .why-attend-card:hover::before {
+    background: linear-gradient(135deg, rgba(245, 158, 58, 0.943) 20%, rgba(4, 163, 248, 0.727) 40%); /* Diagonal gradient on hover */
+    opacity: 1; /* Fully visible on hover */
+    transition: background 0.3s; /* Smooth transition for background change */
+  }
+  
+  .card-content {
+    text-align: center;
+    padding: 20px;
+    z-index: 2; /* Ensure content stays above the overlay */
+  }
+  
+  .card-content p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1.2px;
+  }
+
+
+
+.view-speakers-button {
+    display: block;
+    margin: 50px auto; /* Center align the button */
+    padding: 15px 30px;
+    background-color: rgb(232, 162, 11);
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded corners for the button */
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .view-speakers-button:hover {
+    background-color: rgb(0, 46, 210); /* Slightly darker color on hover */
+    transform: translateY(-3px); /* Lift button on hover */
+  }
+  

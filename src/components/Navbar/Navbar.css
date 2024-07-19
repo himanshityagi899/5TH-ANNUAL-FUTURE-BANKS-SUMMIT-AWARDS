@@ -1,0 +1,162 @@
+/* Navbar.css */
+/* General Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar.scrolled {
+  background-color: #246ed6; /* Blue color when scrolled */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Left side of the Navbar */
+.navbar-left .navbar-logo {
+  height: 68px;
+  margin-left: 20px; /* Adjusted margin */
+}
+
+/* Center of the Navbar for links */
+.navbar-center {
+  display: flex;
+  gap: 24px;
+}
+
+.navlink {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navlink:hover {
+  color: #ffcc00; /* Highlight color on hover */
+}
+
+/* Right side of the Navbar for flags and registration button */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjusted gap */
+}
+
+.flag {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+.register-button {
+  background-color: #ffcc00;
+  color: #0033a0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #e5b800; /* Slightly darker yellow on hover */
+}
+
+/* Media Queries for responsiveness */
+
+/* Large devices (tablets, desktops) */
+@media (max-width: 992px) {
+  .navbar-center {
+    display: flex;
+  margin-left: 68px;
+    gap: 20px;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+
+  .flag {
+    width: 25px;
+  }
+
+  .register-button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px; /* Reduced padding */
+  }
+
+  .navbar-logo {
+    height: 50px; /* Adjusted height */
+  }
+
+  .navbar-center {
+    font-size: 0.7rem; /* Adjusted font size */
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: center;
+    gap: 8px; /* Reduced gap */
+   
+  }
+
+  .register-button {
+    padding: 8px 15px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Small devices (mobile phones) */
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 5px; /* Adjusted padding */
+  }
+
+  .navbar-left {
+    margin-bottom: 10px;
+  }
+
+  .navbar-center {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 0.8rem; /* Adjusted font size */
+    gap: 10px; /* Reduced gap */
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: center;
+    gap: 10px; /* Reduced gap */
+  }
+
+  .flag {
+    width: 20px; /* Smaller flag size */
+  }
+
+  .register-button {
+    padding: 6px 12px; /* Reduced padding */
+    font-size: 0.8rem; /* Reduced font size */
+  }
+}

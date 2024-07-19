@@ -1,0 +1,51 @@
+/* HorizontalCard.css */
+
+.horizontal-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffafa;
+    padding: 20px 0;
+    margin-top: -10px; /* Adjust as needed to overlap with SecureSpot */
+  }
+  
+  .horizontal-card-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-right: 7px solid #ddd;
+  }
+  
+  .horizontal-card-item:last-child {
+    border-right: none; /* Remove border from last item */
+  }
+  
+  .horizontal-card-item h2 {
+    font-size: 2rem;
+    color: #f8ab05;
+    margin-bottom: 5px;
+  }
+  
+  .horizontal-card-item p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 768px) {
+    .horizontal-card {
+      flex-direction: column;
+    }
+  
+    .horizontal-card-item {
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+  
+    .horizontal-card-item:last-child {
+      border-bottom: none;
+    }
+  }
+  

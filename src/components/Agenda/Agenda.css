@@ -1,0 +1,230 @@
+/* Agenda.css */
+/* Agenda.css */
+/* Agenda.css */
+/* Agenda.css */
+
+.agenda-container {
+    width: 100%;
+    background-color: white;
+    padding: 40px 0;
+  }
+  
+  .agenda-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .agenda-vertical-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .agenda-image-part {
+    position: relative;
+    height: 100%;
+  }
+  
+  .agenda-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .overlays {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(54, 137, 227, 0.5);
+    border-radius: 8px;
+  }
+  
+  .agenda-content {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    color: white;
+    margin-left: 8%;
+  }
+  
+  .agenda-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 8%;
+  }
+  
+  .agenda-button {
+    background-color: rgb(232, 162, 11);
+    border: 2px solid white;
+    margin-top: 8%;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .agenda-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: opacity 0.3s, transform 0.3s;
+    border-radius: 20px;
+  }
+  
+  .agenda-button:hover::before {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  
+  .agenda-button:hover {
+    background-color: white;
+    color: rgb(232, 162, 11);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .agenda-card {
+    background-color: white;
+    padding: 20px;
+    border: 4px solid white;
+    border-radius: 2px;
+    border-top: 1px solid rgb(45, 45, 234);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    position: relative; /* Added */
+    transition: transform 0.3s ease; /* Added */
+  }
+  
+  .agenda-card:hover {
+    transform: translateY(-10px); /* Added */
+  }
+  
+  .with-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container {
+    width: 60px;
+    margin-right: 10px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .side-content {
+    margin-top: 15px;
+  }
+  
+  .side-content p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    margin-left: 19px;
+  }
+  
+  .agenda-card::after {
+    content: '\2192'; /* Unicode for right arrow */
+    position: absolute;
+    bottom: -10px; /* Adjust as needed */
+    right: -10px; /* Adjust as needed */
+    width: 40px;
+    height: 20px;
+    background-color: rgb(232, 162, 11);
+    border-bottom-left-radius: 20px; /* For half circle */
+    border-top-right-radius: 20px; /* For half circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: white;
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 992px) {
+    .agenda-section {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  
+    .agenda-image-part {
+      grid-column: span 2;
+      height: 450px;
+    }
+  
+    .agenda-vertical-part {
+      order: 2;
+    }
+  
+    .agenda-image-part {
+      order: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .agenda-section {
+      grid-template-columns: 1fr;
+    }
+  
+    .agenda-image-part {
+      height: 350px;
+    }
+  
+    .agenda-vertical-part {
+      order: 2;
+    }
+  
+    .agenda-image-part {
+      order: 1;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .agenda-section {
+      grid-template-columns: 1fr;
+    }
+  
+    .agenda-image-part {
+      height: 250px;
+    }
+  
+    .agenda-content {
+      position: static;
+      padding: 20px;
+    }
+  
+    .agenda-content h1 {
+        /* position: static; */
+        padding: 8px;
+        margin-top: 1px;
+        font-size: 1.5rem;
+        margin-left: 180px;
+        
+      }
+    .agenda-vertical-part {
+      order: 2;
+    }
+  
+    .agenda-image-part {
+      order: 1;
+    }
+  }
+  

@@ -1,0 +1,144 @@
+/* SecureSpot.css */
+
+/* SecureSpot.css */
+/* SecureSpot.css */
+
+.secure-spot-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ensure overflow is hidden for a clean look */
+  }
+  
+  .secure-spot-image {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover;
+  }
+  
+  .secure-spot-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      rgba(152, 154, 156, 0.5), /* Light blue color with transparency */
+      rgba(160, 166, 168, 0.5)
+    );
+  }
+  
+  .secure-spot-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .secure-spot-title {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .secure-spot-description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  .secure-spot-button {
+    background-color: rgb(232, 162, 11);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .secure-spot-button:hover {
+    background-color: rgb(210, 140, 0); /* Slightly darker color on hover */
+    transform: translateY(-5px); /* Lift button on hover */
+  }
+  
+  .decoration-bottom-left,
+  .decoration-top-right {
+    position: absolute;
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+  }
+  
+  .decoration-bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: rotate(-90deg); /* Rotate to show the blue diagonal part in the bottom left */
+  }
+  
+  .decoration-top-right {
+    top: 0;
+    right: 0;
+    transform: rotate(90deg); /* Rotate to show the blue diagonal part in the top right */
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 992px) {
+    .secure-spot-title {
+      font-size: 2.5rem;
+    }
+  
+    .secure-spot-description {
+      font-size: 1rem;
+    }
+    
+  
+    .decoration-bottom-left,
+    .decoration-top-right {
+      width: 80px; /* Adjust the size as needed */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .secure-spot-title {
+      font-size: 2rem;
+    }
+  
+    .secure-spot-description {
+      font-size: 0.9rem;
+    }
+  
+    .secure-spot-content {
+        top: 25%;
+      }
+    .decoration-bottom-left,
+    .decoration-top-right {
+      width: 60px; /* Adjust the size as needed */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .secure-spot-title {
+      font-size: 1.2rem;
+      
+    }
+  
+    .secure-spot-description {
+      font-size: 0.8rem;
+    }
+
+
+  .secure-spot-content {
+    top: 25%;
+  }
+  
+    .decoration-bottom-left,
+    .decoration-top-right {
+      width: 30px; /* Adjust the size as needed */
+    }
+  }
+  
