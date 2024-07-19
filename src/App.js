@@ -3,6 +3,7 @@ import React from "react";
 // import NavBarr from "./components/NavBarr/NavBarr";
 import BackgroundVideo from "./components/BackgroundVideo/BackgroundVideo";
 import Navbar from './components/Navbar/Navbar';
+import './App.css';
 
 
 

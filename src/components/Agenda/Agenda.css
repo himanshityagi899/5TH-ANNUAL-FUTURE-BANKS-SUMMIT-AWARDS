@@ -70,6 +70,7 @@
     display: inline-block;
     position: relative;
     overflow: hidden;
+    /* margin-left: 25%; */
   }
   
   .agenda-button::before {
@@ -84,6 +85,7 @@
     z-index: -1;
     transition: opacity 0.3s, transform 0.3s;
     border-radius: 20px;
+    margin-left: 27%;
   }
   
   .agenda-button:hover::before {
